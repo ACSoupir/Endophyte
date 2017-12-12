@@ -2,15 +2,14 @@
 Package to make endophyte data processing more simple
 
 # Development version from GitHub
-# install.packages("devtools")
-
+install.packages("devtools")
 devtools::install_github("ACSoupir/Endophyte")
 
-#Functions
+# Functions
 mergeSYM()
 setConf()
 summarySYM()
 
-#Dependencies
+# Dependencies
 library(strignr)
 library(plyr)
