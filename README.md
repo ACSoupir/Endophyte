@@ -7,9 +7,12 @@ devtools::install_github("ACSoupir/Endophyte")
 
 # Functions
 mergeSYM()
+
 setConf()
+
 summarySYM()
 
 # Dependencies
-library(strignr)
+library(stringr)
+
 library(plyr)
