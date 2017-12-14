@@ -1,4 +1,4 @@
-Package: Endophtye
+Package: Endophyte
 Title: Endophyte Summarizing Tool
 Version: 0.0.0.9000
 Authors@R: person("Alex", "Soupir", email = "alex.soupir@sdstate.edu", role = c("aut", "cre"))
