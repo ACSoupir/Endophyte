@@ -12,6 +12,10 @@ temp variable that holds confidence interval for summarySYM()
 \description{
 Set confidence interval to be used when running summarySYM()
 }
+\examples{
+setConf()
+
+}
 \author{
 Alex Soupir
 }

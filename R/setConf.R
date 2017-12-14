@@ -4,7 +4,7 @@
 #'
 #' @return temp variable that holds confidence interval for summarySYM()
 #' @export
-#' @example
+#' @examples
 #' setConf()
 #' 
 
