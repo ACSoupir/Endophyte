@@ -1,9 +1,12 @@
 #' Adds another column to the table output by summarySYM with the percent change
+#' 
+#' @author Alex Soupir
 #'
 #' @param data The table that was output by summarySYM to add a percent change column to
 #' @param perChange The row label that is to be compared to
 #' @param na.rm Set true to not include cells with missing values
 #' @return Table with new column of percent change about \code{perChange}
+#' @export
 #' @examples
 #' perChange(summary_table, perChange="Control", na.rm=TRUE)
 #' new.summary_table <- perChange(summary_table, perChange="Control")

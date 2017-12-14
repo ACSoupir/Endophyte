@@ -23,3 +23,6 @@ Adds another column to the table output by summarySYM with the percent change
 perChange(summary_table, perChange="Control", na.rm=TRUE)
 new.summary_table <- perChange(summary_table, perChange="Control")
 }
+\author{
+Alex Soupir
+}

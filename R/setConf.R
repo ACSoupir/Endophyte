@@ -1,7 +1,10 @@
 #' Set confidence interval to be used when running summarySYM()
+#' 
+#' @author Alex Soupir
 #'
 #' @return temp variable that holds confidence interval for summarySYM()
-#' @examples
+#' @export
+#' @example
 #' setConf()
 #' 
 

@@ -28,3 +28,6 @@ Creates a summary table for a metric that is set using measurevar
 summarySYM(plant_merged, measurevar="Root_Length", groupvars=c("Isolate","Nutrient"), na.rm=TRUE)
 summary_table <- summarySYM(plant_merged, measurevar="Root_Length", groupvars="Isolate", na.rm=TRUE)
 }
+\author{
+Alex Soupir
+}

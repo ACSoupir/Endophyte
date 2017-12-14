@@ -1,17 +1,20 @@
 #' Merges WinRhizo and mass files together
+#' 
+#' @import stringr
+#' @import plyr
+#' 
+#' @author Alex Soupir
 #'
 #' @param weightdata A .csv file containing with headers "SYM Jar_Replicate Seed_Replicate Crop Condition Condition Start_Date Observation_Date Weight_g Root_Length_Pix SurfArea"
 #' @param winrhizo A file containing the raw output of WinRhizo converted converted to .csv format
 #' @param cropname A name that will be added to the output file along with the date that the function was run
 #' @return The merged file of \code{weightdata} and \code{winrhizo}
+#' @export
 #' @examples
-#' mergeSYM()
-#' add(10, 1)
-#' 
+#' mergeSYM(weightdata = plant_weight_data, winrhizo = root_winrhizo_data, cropname = "Plant Name)
+#' merged_df <- mergeSYM(weightdata = plant_weight_data, winrhizo = root_winrhizo_data, cropname = "Plant Name)
 
 mergeSYM <- function(weightdata , winrhizo , cropname = NULL){
-  library(stringr)
-  library(plyr)
   
   winrhizo <- data.frame(winrhizo)
   

@@ -1,4 +1,8 @@
 #' Creates a summary table for a metric that is set using measurevar
+#' 
+#' @import plyr
+#' 
+#' @author Alex Soupir
 #'
 #' @param data A dataset that has raw data to be summarized
 #' @param measurevar A column heading that is to be summarized
@@ -6,13 +10,14 @@
 #' @param groupvars The column heading(s) for summary (isolate)
 #' @param na.rm Set true to not include cells with missing values
 #' @return Table with summarized information about \code{measurevar} sorted by \code{groupvars}
+#' @export
 #' @examples
 #' summarySYM(plant_merged, measurevar="Root_Length", groupvars=c("Isolate","Nutrient"), na.rm=TRUE)
 #' summary_table <- summarySYM(plant_merged, measurevar="Root_Length", groupvars="Isolate", na.rm=TRUE)
 
 summarySYM <- function(data=NULL, measurevar, change=NULL, groupvars=NULL, na.rm=FALSE,
                                 conf.interval=temp, .drop=TRUE) {
-  library(plyr)
+  
   # New version of length which can handle NA's: if na.rm==T, don't count them
   length2 <- function (x, na.rm=FALSE) {
     if (na.rm) sum(!is.na(x))

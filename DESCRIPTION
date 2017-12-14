@@ -1,11 +1,11 @@
-Package: Endophyte
+Package: Endophtye
 Title: Endophyte Summarizing Tool
 Version: 0.0.0.9000
 Authors@R: person("Alex", "Soupir", email = "alex.soupir@sdstate.edu", role = c("aut", "cre"))
 Description: Allow for quick merging and summarizing of endophyte data.
 Depends: R (>= 3.4.2)
 Imports:
-	stringr,
+	stringr, 
 	plyr	
 License: No License?
 Encoding: UTF-8

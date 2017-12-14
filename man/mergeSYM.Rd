@@ -20,6 +20,9 @@ The merged file of \code{weightdata} and \code{winrhizo}
 Merges WinRhizo and mass files together
 }
 \examples{
-mergeSYM(weightdata = plant_weight_data, winrhizo = root_winrhizo_data, cropname = "Crop title")
-
+mergeSYM(weightdata = plant_weight_data, winrhizo = root_winrhizo_data, cropname = "Plant Name)
+merged_df <- mergeSYM(weightdata = plant_weight_data, winrhizo = root_winrhizo_data, cropname = "Plant Name)
+}
+\author{
+Alex Soupir
 }
