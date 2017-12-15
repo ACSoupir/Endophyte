@@ -33,6 +33,8 @@ mergeSYM <- function(weightdata , winrhizo , cropname = NULL){
     print("RAW WinRhizo Document")
     
     winrhizo <- winrhizo[-c(1,2,3,4),]
+    
+    colnames(winrhizo)[1] <- "RHIZO.2016a"
   }else{
     colnames(winrhizo)[1] <- "RHIZO.2016a"
     colnames(winrhizo)[16] <- "Length"
