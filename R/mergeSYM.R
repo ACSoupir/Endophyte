@@ -85,21 +85,39 @@ mergeSYM <- function(weightdata , winrhizo , cropname = NULL){
   
   #couldn't figure out a way to make this shorter
   #renames the seed replicate to a integer rather than string
-  winCom[winCom$Seed_Replicate=="A.tif_1","Seed_Replicate"]=1
-  winCom[winCom$Seed_Replicate=="A.tif_2","Seed_Replicate"]=2
-  winCom[winCom$Seed_Replicate=="A.tif_3","Seed_Replicate"]=3
-  winCom[winCom$Seed_Replicate=="A.tif_4","Seed_Replicate"]=4
-  winCom[winCom$Seed_Replicate=="A.tif_5","Seed_Replicate"]=5
-  winCom[winCom$Seed_Replicate=="B.tif_1","Seed_Replicate"]=6
-  winCom[winCom$Seed_Replicate=="B.tif_2","Seed_Replicate"]=7
-  winCom[winCom$Seed_Replicate=="B.tif_3","Seed_Replicate"]=8
-  winCom[winCom$Seed_Replicate=="B.tif_4","Seed_Replicate"]=9
-  winCom[winCom$Seed_Replicate=="B.tif_5","Seed_Replicate"]=10
-  winCom[winCom$Seed_Replicate=="C.tif_1","Seed_Replicate"]=11
-  winCom[winCom$Seed_Replicate=="C.tif_2","Seed_Replicate"]=12
-  winCom[winCom$Seed_Replicate=="C.tif_3","Seed_Replicate"]=13
-  winCom[winCom$Seed_Replicate=="C.tif_4","Seed_Replicate"]=14
-  winCom[winCom$Seed_Replicate=="C.tif_5","Seed_Replicate"]=15
+  if (winCom[2,3] == "A.tif_1") {
+    winCom[winCom$Seed_Replicate=="A.tif_1","Seed_Replicate"]=1
+    winCom[winCom$Seed_Replicate=="A.tif_2","Seed_Replicate"]=2
+    winCom[winCom$Seed_Replicate=="A.tif_3","Seed_Replicate"]=3
+    winCom[winCom$Seed_Replicate=="A.tif_4","Seed_Replicate"]=4
+    winCom[winCom$Seed_Replicate=="A.tif_5","Seed_Replicate"]=5
+    winCom[winCom$Seed_Replicate=="B.tif_1","Seed_Replicate"]=6
+    winCom[winCom$Seed_Replicate=="B.tif_2","Seed_Replicate"]=7
+    winCom[winCom$Seed_Replicate=="B.tif_3","Seed_Replicate"]=8
+    winCom[winCom$Seed_Replicate=="B.tif_4","Seed_Replicate"]=9
+    winCom[winCom$Seed_Replicate=="B.tif_5","Seed_Replicate"]=10
+    winCom[winCom$Seed_Replicate=="C.tif_1","Seed_Replicate"]=11
+    winCom[winCom$Seed_Replicate=="C.tif_2","Seed_Replicate"]=12
+    winCom[winCom$Seed_Replicate=="C.tif_3","Seed_Replicate"]=13
+    winCom[winCom$Seed_Replicate=="C.tif_4","Seed_Replicate"]=14
+    winCom[winCom$Seed_Replicate=="C.tif_5","Seed_Replicate"]=15
+  } else if (winCom[2,3] == "001.tif_1") {
+    winCom[winCom$Seed_Replicate=="001.tif_1","Seed_Replicate"]=1
+    winCom[winCom$Seed_Replicate=="001.tif_2","Seed_Replicate"]=2
+    winCom[winCom$Seed_Replicate=="001.tif_3","Seed_Replicate"]=3
+    winCom[winCom$Seed_Replicate=="001.tif_4","Seed_Replicate"]=4
+    winCom[winCom$Seed_Replicate=="001.tif_5","Seed_Replicate"]=5
+    winCom[winCom$Seed_Replicate=="002.tif_1","Seed_Replicate"]=6
+    winCom[winCom$Seed_Replicate=="002.tif_2","Seed_Replicate"]=7
+    winCom[winCom$Seed_Replicate=="002.tif_3","Seed_Replicate"]=8
+    winCom[winCom$Seed_Replicate=="002.tif_4","Seed_Replicate"]=9
+    winCom[winCom$Seed_Replicate=="002.tif_5","Seed_Replicate"]=10
+    winCom[winCom$Seed_Replicate=="003.tif_1","Seed_Replicate"]=11
+    winCom[winCom$Seed_Replicate=="003.tif_2","Seed_Replicate"]=12
+    winCom[winCom$Seed_Replicate=="003.tif_3","Seed_Replicate"]=13
+    winCom[winCom$Seed_Replicate=="003.tif_4","Seed_Replicate"]=14
+    winCom[winCom$Seed_Replicate=="003.tif_5","Seed_Replicate"]=15
+  }
   
   #creates the summary table for the winrhizo document  
   WinRhizoSummary <- ddply(winCom,c("SYM","Jar_Replicate"),summarise,
