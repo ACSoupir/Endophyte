@@ -52,7 +52,7 @@ summarySYM <- function(data=NULL, measurevar, change=NULL, groupvars=NULL, na.rm
   }
   
   #calculates the change for each variable set before
-  datac$change <- ((datac[,3] - datac[i,3]) / datac[i,3])
+  datac$change <- ((datac[,"mean"] - datac[i,"mean"]) / datac[i,"mean"])
   
   # Rename the "mean" column    
   datac <- rename(datac, c("mean" = measurevar))
