@@ -25,7 +25,7 @@ Table with summarized information about \code{measurevar} sorted by \code{groupv
 Creates a summary table for a metric that is set using measurevar
 }
 \examples{
-summarySYM(plant_merged, measurevar="Root_Length", groupvars=c("Isolate","Nutrient"), na.rm=TRUE)
+summarySYM(plant_merged, measurevar="Root_Length", change="Control", groupvars=c("Isolate","Nutrient"), na.rm=TRUE)
 summary_table <- summarySYM(plant_merged, measurevar="Root_Length", groupvars="Isolate", na.rm=TRUE)
 }
 \author{

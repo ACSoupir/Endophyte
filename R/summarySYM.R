@@ -12,7 +12,7 @@
 #' @return Table with summarized information about \code{measurevar} sorted by \code{groupvars}
 #' @export
 #' @examples
-#' summarySYM(plant_merged, measurevar="Root_Length", groupvars=c("Isolate","Nutrient"), na.rm=TRUE)
+#' summarySYM(plant_merged, measurevar="Root_Length", change="Control", groupvars=c("Isolate","Nutrient"), na.rm=TRUE)
 #' summary_table <- summarySYM(plant_merged, measurevar="Root_Length", groupvars="Isolate", na.rm=TRUE)
 
 summarySYM <- function(data=NULL, measurevar, change=NULL, groupvars=NULL, na.rm=FALSE,
@@ -37,9 +37,6 @@ summarySYM <- function(data=NULL, measurevar, change=NULL, groupvars=NULL, na.rm
                  measurevar
   )
   
-  # Rename the "mean" column    
-  datac <- rename(datac, c("mean" = measurevar))
-  
   datac$se <- datac$sd / sqrt(datac$N)  # Calculate standard error of the mean
   
   # Confidence interval multiplier for standard error
@@ -55,7 +52,10 @@ summarySYM <- function(data=NULL, measurevar, change=NULL, groupvars=NULL, na.rm
   }
   
   #calculates the change for each variable set before
-  datac$change <- ((datac[,4] - datac[i,4]) / datac[i,4])
+  datac$change <- ((datac[,3] - datac[i,3]) / datac[i,3])
+  
+  # Rename the "mean" column    
+  datac <- rename(datac, c("mean" = measurevar))
   
   #returns the new table
   # use "<- summarySYM()" to set global table
