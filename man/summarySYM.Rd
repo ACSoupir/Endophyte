@@ -4,7 +4,7 @@
 \alias{summarySYM}
 \title{Creates a summary table for a metric that is set using measurevar}
 \usage{
-summarySYM(data = NULL, measurevar, change = NULL, groupvars = NULL,
+summarySYM(data = NULL, measurevar, change = "NULL", groupvars = NULL,
   na.rm = FALSE, conf.interval = temp, .drop = TRUE)
 }
 \arguments{
