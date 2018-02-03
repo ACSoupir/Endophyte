@@ -13,3 +13,4 @@
 # Dependencies
 + library(stringr)
 + library(plyr)
++ library(FSA)
