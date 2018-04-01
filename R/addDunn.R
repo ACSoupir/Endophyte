@@ -18,12 +18,23 @@
 
 addDunn <- function(data, summaryData, dunnComp, padj = NULL){
   x <- colnames(summaryData)[1]
+  y <- colnames(summaryData)[3]
+
+  i=1
+  while(y != colnames(data)[i]){
+    i=i+1
+  }
+
+  j=1
+  while(x != colnames(data)[j]){
+    j=j+1
+  }
 
   if(is.null(padj)){
     padj = "none"
   }
 
-  dunn <- dunnTest(summaryData[[3]] ~ summaryData[[1]], data, method = padj, two.sided = FALSE)[["res"]]
+  dunn <- dunnTest(data[[i]] ~ data[[j]], data, method = padj, two.sided = FALSE)[["res"]]
 
   df <- rename(data.frame(str_split_fixed(dunn$Comparison, " - ", 2)),
                c("X1"=colnames(summaryData)[1],"X2"="X2"))
