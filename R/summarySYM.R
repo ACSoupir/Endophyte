@@ -67,3 +67,7 @@ summarySYM <- function(data=NULL, measurevar, change=NULL, groupvars=NULL, na.rm
   # use "<- summarySYM()" to set global table
   return(data2)
 }
+
+#library("devtools")
+#library(roxygen)
+#document()
