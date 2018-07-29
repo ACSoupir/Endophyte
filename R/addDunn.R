@@ -74,7 +74,7 @@ addDunn <- function(data, summaryData, dunnComp, padj = NULL, tukey = NULL){
 
   df4 <- merge(summaryData, df3, by.x=colnames(summaryData)[1], by.y=colnames(df3)[1], all.x=TRUE)
 
-  if(tukey == TRUE){
+  if(!is.null(tukey)){
     ana <- aov(data[[i]] ~ data[[j]], data = data)
     tuk <- TukeyHSD(ana, ordered = TRUE)
     rst <- data.frame(tuk$`data[[j]]`)
