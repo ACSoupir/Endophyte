@@ -18,17 +18,15 @@
 
 addNormSig <- function(anova, summaryData, groupvar, alpha=NULL){
 
-  if(is.null(alpha)){
+  if (is.null(alpha)) {
     alpha = "0.05"
   }
-
-  temp.letter = HSD.test(anova, "Isolate", alpha, group=TRUE, console=FALSE)
-
+  temp.letter = HSD.test(anova, groupvar, alpha, group = TRUE,
+                         console = FALSE)
   df = data.frame(temp.letter[["groups"]])
-  df$Isolate = row.names(df)
-  df = df[c(3,2)]
-
-  df2 = merge(summaryData, df, by="Isolate")
-
+  df$temp = row.names(df)
+  colnames(df)[3] = groupvar
+  df = df[c(3, 2)]
+  df2 = merge(summaryData, df, by = groupvar)
   return(df2)
 }
