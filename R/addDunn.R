@@ -34,7 +34,7 @@ addDunn <- function(data, summaryData, dunnComp, padj = NULL, tukey = NULL){
     padj = "none"
   }
 
-  dunn <- dunnTest(data[[i]] ~ data[[j]], data, method = padj, two.sided = FALSE)[["res"]]
+  dunn <- dunnTest(data[[i]] ~ data[[j]], data, method = padj, two.sided = TRUE)[["res"]]
 
   df <- rename(data.frame(str_split_fixed(dunn$Comparison, " - ", 2)),
                c("X1"="X1","X2"="X2"))
