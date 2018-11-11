@@ -4,7 +4,7 @@
 \alias{addDunn}
 \title{Merges summarySYM with Dunn's Results}
 \usage{
-addDunn(data, summaryData, dunnComp, padj = NULL)
+addDunn(data, summaryData, dunnComp, padj = NULL, tukey = NULL)
 }
 \arguments{
 \item{data}{the raw data to be tested statistically}

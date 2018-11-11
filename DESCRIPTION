@@ -4,10 +4,11 @@ Version: 0.0.0.9
 Authors@R: person("Alex", "Soupir", email = "alex.soupir@sdstate.edu", role = c("aut", "cre"))
 Description: Allow for quick merging and summarizing of endophyte data.
 Depends: R (>= 3.4.2)
-Imports:stringr, 
+Imports:
+	stringr, 
 	plyr,
 	FSA
 License: No License?
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
