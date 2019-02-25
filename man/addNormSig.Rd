@@ -4,7 +4,7 @@
 \alias{addNormSig}
 \title{Merges summarySYM with Dunn's Results}
 \usage{
-addNormSig(anova, summaryData, groupvar, alpha = NULL)
+addNormSig(anova, summaryData, groupvar, alpha = NULL, keepAll = FALSE)
 }
 \arguments{
 \item{anova}{the anova of data of which significance is to be calculated}

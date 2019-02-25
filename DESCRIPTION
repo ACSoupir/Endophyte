@@ -5,7 +5,6 @@ Authors@R: person("Alex", "Soupir", email = "alex.soupir@sdstate.edu", role = c(
 Description: Allow for quick merging and summarizing of endophyte data.
 Depends: R (>= 3.4.2)
 Imports:
-  agricolae,
 	stringr, 
 	plyr,
 	FSA

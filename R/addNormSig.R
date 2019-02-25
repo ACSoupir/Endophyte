@@ -16,7 +16,7 @@
 #' mergeSYM(weightdata = plant_weight_data, winrhizo = root_winrhizo_data, cropname = "Plant Name)
 #' merged_df <- mergeSYM(weightdata = plant_weight_data, winrhizo = root_winrhizo_data, cropname = "Plant Name)
 
-addNormSig <- function(anova, summaryData, groupvar, alpha=NULL){
+addNormSig <- function(anova, summaryData, groupvar, alpha=NULL, keepAll=FALSE){
 
   if (is.null(alpha)) {
     alpha = "0.05"
@@ -27,6 +27,6 @@ addNormSig <- function(anova, summaryData, groupvar, alpha=NULL){
   df$temp = row.names(df)
   colnames(df)[3] = groupvar
   df = df[c(3, 2)]
-  df2 = merge(summaryData, df, by = groupvar)
+  df2 = merge(summaryData, df, by = groupvar, all = keepAll)
   return(df2)
 }
