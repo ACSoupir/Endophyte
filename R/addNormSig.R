@@ -9,7 +9,7 @@
 #' @param anova the anova of data of which significance is to be calculated
 #' @param summaryData A data frame output by the summarySYM function
 #' @param groupvar variable to group data by (independent variable)
-#' @param alpha significance level, default is 0.05 when set to NULL
+#' @param signif significance level, default is 0.05 when set to NULL
 #' @return The merged file of \code{summaryData} and FSA's dunnTest results
 #' @export
 #' @examples
@@ -18,10 +18,10 @@
 
 addNormSig <- function(anova, summaryData, groupvar, signif, keepAll=FALSE){
 
-  if (is.null(alpha)) {
-    alpha = "0.05"
+  if (is.null(signif)) {
+    signif = "0.05"
   }
-  temp.letter = HSD.test(anova, groupvar, alpha, group = TRUE,
+  temp.letter = HSD.test(anova, groupvar, signif, group = TRUE,
                          console = FALSE)
   df = data.frame(temp.letter[["groups"]])
   df$temp = row.names(df)
