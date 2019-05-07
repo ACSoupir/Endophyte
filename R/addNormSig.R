@@ -16,7 +16,7 @@
 #' mergeSYM(weightdata = plant_weight_data, winrhizo = root_winrhizo_data, cropname = "Plant Name)
 #' merged_df <- mergeSYM(weightdata = plant_weight_data, winrhizo = root_winrhizo_data, cropname = "Plant Name)
 
-addNormSig <- function(anova, summaryData, groupvar, alpha=NULL, keepAll=FALSE){
+addNormSig <- function(anova, summaryData, groupvar, signif, keepAll=FALSE){
 
   if (is.null(alpha)) {
     alpha = "0.05"
