@@ -21,7 +21,7 @@ addNormSig <- function(anova, summaryData, groupvar, signif, keepAll=FALSE){
   if (is.null(signif)) {
     signif = "0.05"
   }
-  temp.letter = HSD.test(anova, groupvar, signif, group = TRUE,
+  temp.letter = HSD.test(anova, groupvar, alpha = signif, group = TRUE,
                          console = FALSE)
   df = data.frame(temp.letter[["groups"]])
   df$temp = row.names(df)
