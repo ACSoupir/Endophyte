@@ -4,7 +4,7 @@
 \alias{addNormSig}
 \title{Merges summarySYM with Dunn's Results}
 \usage{
-addNormSig(anova, summaryData, groupvar, alpha = NULL, keepAll = FALSE)
+addNormSig(anova, summaryData, groupvar, signif, keepAll = FALSE)
 }
 \arguments{
 \item{anova}{the anova of data of which significance is to be calculated}
@@ -13,7 +13,7 @@ addNormSig(anova, summaryData, groupvar, alpha = NULL, keepAll = FALSE)
 
 \item{groupvar}{variable to group data by (independent variable)}
 
-\item{alpha}{significance level, default is 0.05 when set to NULL}
+\item{signif}{significance level, default is 0.05 when set to NULL}
 }
 \value{
 The merged file of \code{summaryData} and FSA's dunnTest results
