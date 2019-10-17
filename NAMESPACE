@@ -2,7 +2,7 @@
 
 export(addDunn)
 export(addNormSig)
-export(mergeSYM)
+# export(mergeSYM)
 export(perChange)
 export(setConf)
 export(summarySYM)
